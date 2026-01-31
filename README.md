@@ -13,7 +13,13 @@ Features:
 flags or long/confusing arguments
 
 ## How To Build
+#### Requirements:
+-nodejs(if also hosting a server)
 
+-python 3
+
+-gcc
+________________
 1)clone the repository:
 ` git clone https://github.com/tohar777/kotel.git`
 
@@ -31,6 +37,10 @@ it will generate a release and debug binaries
 install:
 
 `kotel get org.example.package`
+
+install packages locally:
+
+`kotel localget org.example.package`
 
 load Lua scripts:
 

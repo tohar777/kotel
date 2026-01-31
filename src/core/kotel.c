@@ -14,20 +14,28 @@ int main(int argc,const char* argv[]){
     curl_global_init(CURL_GLOBAL_DEFAULT);
     curl = curl_easy_init();
     if(argc == 3){
-        if(strcmp(argv[1],"get")==0){
+        /*if(strcmp(argv[1],"get")==0){
             printf("getting %s...\n",argv[2]);
-            char* packageID = argv[2];    
+            char* packageID = argv[2];
+            char* data[4096];
+            snprintf(packageID,sizeof(packageID),"https://localhost:9080/core/%s",packageID);
+            if(curl){
+                    curl_easy_setopt(curl,CURLOPT_URL,packageID);
+            }else{
+                    printf("couldn't initaize CURL");
+            }
+        }*/
+        if(strcmp(argv[1],"localget")){
+            printf("working on %s",argv[2]);
+            char* localPackage;
+            snprintf(localPackage,sizeof(localPackage),"tar -xf %s.tar.gz",localPackage);
 
         }
         if (strcmp(argv[1],"load")){
             char filepath[1024];
             snprintf(filepath, sizeof(filepath), "./%s", argv[2]);
             if(luaL_dofile(L,filepath)==LUA_OK){
-                if(curl){
-
-                }else{
-                    printf("couldn't initaize CURL");
-                }
+                
             }
             else{
                 printf("%s doesn't exist or worng directory",filepath);
