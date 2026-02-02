@@ -16,7 +16,9 @@ flags or long/confusing arguments
 #### Requirements:
 -nodejs(if also hosting a server)
 
--python 3
+-libcurl
+
+tar(for the installing step)
 
 -gcc
 ________________
