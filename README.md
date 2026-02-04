@@ -25,13 +25,12 @@ ________________
 1)clone the repository:
 ` git clone https://github.com/tohar777/kotel.git`
 
-2)build using the compile.sh(G++)
-`./compile.sh`
+2)build using the make(G++)
+`make build` or `make build-debug`
 
-it will generate a release and debug binaries
+it will generate a release or debug binaries
 
-2.1) in case of premission denied:
-`sudo(or doas) bash ./compile.sh`
+
 
 
 ## How to Use
